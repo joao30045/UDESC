@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include "FilaGenerica.h"
+#include "Matriz.h"
+#include "PilhaGenerica.h"
+
+#define N m.col
+
+void mostra_int( void *x ){
+	int *p = x;
+	printf("%d\n", *p);
+}
+
+int main(int argc, char *argv[]) {
+	Matriz m;
+	FilaGenerica f;
+
+	carrega_arquivo("entrada.txt", &m);
+	int a, b, c, i, x;
+	int *vetorStatus = (int *)malloc(N * sizeof(int));
+	for (i = 0; i < N; i++) {
+    	vetorStatus[i] = 0; 
+	}
+	int *vetorAntecessores = (int *)malloc(N * sizeof(int));
+	for (i = 0; i < N; i++) {
+    	vetorAntecessores[i] = 0; 
+	}
+	inicializa_fila(&f, N, sizeof(int));
+	printf("Qual o vértice inicial A do percurso?\n");
+	scanf("%d", &a);
+	printf("Qual o vértice final B do percurso?\n");
+	scanf("%d", &b);
+	if(a < 0 || a > N || b < 0 || b > N){
+		printf("Insira vértices válidos\n");
+		return 0;
+	}
+	a-- && b--;
+
+	vetorStatus[a] = 1;
+	inserir(&f, &a);
+	bool achou = false;
+
+	while(!fila_vazia(f) && !achou){
+		remover(&f, &x);
+		if(x == b){
+			achou = true;
+		}else{
+			for(i = 0; i < N; i++){
+				if(m.dados[x][i] == 1 && vetorStatus[i] == 0){
+					vetorStatus[i] = 1;
+					vetorAntecessores[i] = x;
+					inserir(&f, &i);
+				}
+			}
+		}
+	}
+
+	printf("Vetor de antecessores\n");
+	for(i = 0; i < N; i++){
+		printf("%d\n", vetorAntecessores[i]);
+	}
+	printf("Vetor de status\n");
+	for(i = 0; i < N; i++){
+		printf("%d\n", vetorStatus[i]);
+	}
+
+	if(achou){
+		PilhaGenerica p;
+		inicializa_pilha(&p, N, sizeof(int));
+		while(x != a){
+			empilha(&p, &x);
+			x = vetorAntecessores[x];
+		}
+		empilha(&p, &a);
+		printf("Caminho de A até B\n");
+		while(!pilha_vazia(p)){
+			desempilha(&p, &c);
+			printf("%d\n", c + 1);
+		}
+		desaloca_pilha(&p);
+	}else{
+		printf("B não é alcançável a partir de A!\n");
+	}
+	desaloca_fila(&f);
+	desaloca_matriz(&m);
+
+return 0;
+}
