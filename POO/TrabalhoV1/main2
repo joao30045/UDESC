@@ -1,0 +1,298 @@
+package apresentacao;
+
+import dados.*;
+import negocio.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Main {
+    private static Sistema lista = new Sistema();
+    private static JTextField tituloRemoverField;
+    private static JTextArea conteudosTextArea;
+    private static JTabbedPane tabbedPane;
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> createAndShowGUI());
+    }
+    private static void createAndShowGUI() {
+        JFrame frame = new JFrame("Pooflix");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        tabbedPane = new JTabbedPane();
+
+        JPanel cadastrarFilmePanel = createCadastrarFilmePanel();
+        JPanel cadastrarSeriePanel = createCadastrarSeriePanel();
+        JPanel mostrarConteudosPanel = createMostrarConteudosPanel();
+        JPanel removerConteudosPanel = createRemoverConteudosPanel();
+
+        tabbedPane.addTab("Cadastrar filme", cadastrarFilmePanel);
+        tabbedPane.addTab("Cadastrar série", cadastrarSeriePanel);
+        tabbedPane.addTab("Catálogo", mostrarConteudosPanel);
+        tabbedPane.addTab("Remover conteúdo", removerConteudosPanel);
+
+        panel.add(tabbedPane, BorderLayout.CENTER);
+
+        frame.getContentPane().add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    private static JPanel createCadastrarFilmePanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        constraints.insets = new Insets(5, 5, 5, 5);
+
+        // Título
+        JLabel tituloLabel = new JLabel("Título:");
+        panel.add(tituloLabel, constraints);
+
+        JTextField tituloField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(tituloField, constraints);
+
+        // Gênero
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel generoLabel = new JLabel("Gênero:");
+        panel.add(generoLabel, constraints);
+
+        JTextField generoField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(generoField, constraints);
+
+        // Descrição
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel descricaoLabel = new JLabel("Descrição:");
+        panel.add(descricaoLabel, constraints);
+
+        JTextField descricaoField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(descricaoField, constraints);
+
+        // Ano
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel anoLabel = new JLabel("Ano:");
+        panel.add(anoLabel, constraints);
+
+        JTextField anoField = new JTextField(10);
+        constraints.gridx = 1;
+        panel.add(anoField, constraints);
+
+        // Duração
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel duracaoLabel = new JLabel("Duração:");
+        panel.add(duracaoLabel, constraints);
+
+        JTextField duracaoField = new JTextField(10);
+        constraints.gridx = 1;
+        panel.add(duracaoField, constraints);
+
+        // Botão Cadastrar
+        constraints.gridy++;
+        constraints.gridx = 0;
+        constraints.gridwidth = 2;
+        JButton cadastrarButton = new JButton("Cadastrar");
+        panel.add(cadastrarButton, constraints);
+
+        cadastrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cadastrarFilme(tituloField.getText(), generoField.getText(),
+                        descricaoField.getText(), Integer.parseInt(anoField.getText()),
+                        Integer.parseInt(duracaoField.getText()));
+                limparCampos(tituloField, generoField, descricaoField, anoField, duracaoField);
+            }
+        });
+
+        return panel;
+    }
+
+    private static JPanel createCadastrarSeriePanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        constraints.insets = new Insets(5, 5, 5, 5);
+
+        // Título
+        JLabel tituloLabel = new JLabel("Título:");
+        panel.add(tituloLabel, constraints);
+
+        JTextField tituloField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(tituloField, constraints);
+
+        // Gênero
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel generoLabel = new JLabel("Gênero:");
+        panel.add(generoLabel, constraints);
+
+        JTextField generoField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(generoField, constraints);
+
+        // Descrição
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel descricaoLabel = new JLabel("Descrição:");
+        panel.add(descricaoLabel, constraints);
+
+        JTextField descricaoField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(descricaoField, constraints);
+
+        // Ano
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel anoLabel = new JLabel("Ano:");
+        panel.add(anoLabel, constraints);
+
+        JTextField anoField = new JTextField(10);
+        constraints.gridx = 1;
+        panel.add(anoField, constraints);
+
+        // Temporadas
+        constraints.gridy++;
+        constraints.gridx = 0;
+        JLabel temporadasLabel = new JLabel("Temporadas:");
+        panel.add(temporadasLabel, constraints);
+
+        JTextField temporadasField = new JTextField(10);
+        constraints.gridx = 1;
+        panel.add(temporadasField, constraints);
+
+        // Botão Cadastrar
+        constraints.gridy++;
+        constraints.gridx = 0;
+        constraints.gridwidth = 2;
+        JButton cadastrarButton = new JButton("Cadastrar");
+        panel.add(cadastrarButton, constraints);
+
+        cadastrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cadastrarSerie(tituloField.getText(), generoField.getText(),
+                        descricaoField.getText(), Integer.parseInt(anoField.getText()),
+                        Integer.parseInt(temporadasField.getText()));
+                limparCampos(tituloField, generoField, descricaoField, anoField, temporadasField);
+            }
+        });
+
+        return panel;
+    }
+
+    private static JPanel createMostrarConteudosPanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        conteudosTextArea = new JTextArea(10, 30);
+        conteudosTextArea.setEditable(false);
+
+        JScrollPane scrollPane = new JScrollPane(conteudosTextArea);
+        panel.add(scrollPane, BorderLayout.CENTER);
+
+        JButton mostrarButton = new JButton("Mostrar Conteúdos");
+        panel.add(mostrarButton, BorderLayout.NORTH);
+
+        mostrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mostrarConteudos();
+            }
+        });
+
+        return panel;
+    }
+
+    private static JPanel createRemoverConteudosPanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        constraints.insets = new Insets(5, 5, 5, 5);
+
+        // Título
+        JLabel tituloLabel = new JLabel("Título:");
+        panel.add(tituloLabel, constraints);
+
+        tituloRemoverField = new JTextField(20);
+        constraints.gridx = 1;
+        panel.add(tituloRemoverField, constraints);
+
+        // Botão Remover
+        constraints.gridy++;
+        constraints.gridx = 0;
+        constraints.gridwidth = 2;
+        JButton removerButton = new JButton("Remover");
+        panel.add(removerButton, constraints);
+
+        removerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removerConteudo(tituloRemoverField.getText());
+                tituloRemoverField.setText("");
+            }
+        });
+
+        return panel;
+    }
+
+    private static void cadastrarFilme(String titulo, String genero, String descricao, int ano, int duracao) {
+        Filme filme = new Filme();
+        filme.setTitulo(titulo);
+        filme.setGenero(genero);
+        filme.setDescricao(descricao);
+        filme.setAno(ano);
+        filme.setDuracao(duracao);
+
+        lista.adicionaConteudo(filme);
+    }
+
+    private static void cadastrarSerie(String titulo, String genero, String descricao, int ano, int temporadas) {
+        Serie serie = new Serie();
+        serie.setTitulo(titulo);
+        serie.setGenero(genero);
+        serie.setDescricao(descricao);
+        serie.setAno(ano);
+        serie.setTemporada(temporadas);
+
+        lista.adicionaConteudo(serie);
+    }
+
+    private static void mostrarConteudos() {
+        conteudosTextArea.setText("");
+        for (Conteudo item : lista.getConteudos()) {
+            conteudosTextArea.append(item.toString() + "\n");
+        }
+    }
+
+    private static void removerConteudo(String titulo) {
+        lista.removerConteudo(titulo);
+    }
+
+    private static void limparCampos(JTextField... campos) {
+        for (JTextField campo : campos) {
+            campo.setText("");
+        }
+    }
+}

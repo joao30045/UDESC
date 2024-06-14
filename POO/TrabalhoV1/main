@@ -1,0 +1,90 @@
+public class Main {
+    private static Scanner s = new Scanner(System.in);
+    private static Sistema lista = new Sistema();
+
+    public static void main(String[] args) {
+        int opcao = -1;
+        while(opcao != 0){
+            System.out.println("Escolha uma opção:");
+            System.out.println("0 - Sair");
+            System.out.println("1 - Cadastrar um conteúdo");
+            System.out.println("2 - Remover um conteúdo");
+            System.out.println("3 - Mostrar todos os conteúdos");
+    
+            opcao = Integer.parseInt(s.nextLine());
+    
+            switch(opcao){
+                case 0:
+                    break;
+                case 1:
+                    Conteudo conteudo = adicionaConteudo();
+                    lista.adicionaConteudo(conteudo);
+                    break;
+                case 2:
+                    removerConteudo();
+                    break;
+                case 3: 
+                    mostrarConteudo();
+                    break;
+                default:
+                    System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
+                    break;
+            }
+        }
+    }
+    
+    public static Conteudo adicionaConteudo() {
+        System.out.println("Escolha o tipo de conteúdo:");
+        System.out.println("1 - Filme");
+        System.out.println("2 - Série");
+    
+        int tipo = Integer.parseInt(s.nextLine());
+    
+        switch (tipo) {
+            case 1:
+                Filme filme = new Filme();
+                System.out.println("Digite o titulo do filme:");
+                filme.setTitulo(s.nextLine());
+                System.out.println("Digite o genero:");
+                filme.setGenero(s.nextLine());
+                System.out.println("Digite a descricao do filme:");
+                filme.setDescricao(s.nextLine());
+                System.out.println("Digite o ano de lançamento:");
+                filme.setAno(Integer.parseInt(s.nextLine()));
+                System.out.println("Digite a duração:");
+                filme.setDuracao(Integer.parseInt(s.nextLine()));
+                return filme;
+    
+            case 2:
+                Serie serie = new Serie();
+    
+                System.out.println("Digite o título da série:");
+                serie.setTitulo(s.nextLine());
+                System.out.println("Digite o gênero:");
+                serie.setGenero(s.nextLine());
+                System.out.println("Digite a descrição da série:");
+                serie.setDescricao(s.nextLine());
+                System.out.println("Digite o ano de lançamento:");
+                serie.setAno(Integer.parseInt(s.nextLine()));
+                System.out.println("Digite o número de temporadas:");
+                serie.setTemporada(Integer.parseInt(s.nextLine()));
+    
+                return serie;
+    
+            default:
+                System.out.println("Opção inválida.");
+                break;
+        }
+        return null;
+    }
+    public static void mostrarConteudo() {
+        for (Conteudo item : lista.getConteudos()) {
+            System.out.println(item.toString());
+        }
+    }
+    public static void removerConteudo(){
+        System.out.println("Digite o título do conteúdo a ser removido:");
+        String tituloRemover = s.nextLine();
+        lista.removerConteudo(tituloRemover);
+    }
+}
