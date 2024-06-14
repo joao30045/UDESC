@@ -1,0 +1,3 @@
+
+class ObjetoSobreposto(Exception):
+    pass

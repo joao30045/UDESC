@@ -1,0 +1,26 @@
+[
+    {
+    "titulo": "Apertem os cintos, o piloto sumiu",
+    "ano": 1980,
+    "classificacao": "Livre",
+    "nota": 7.7
+    },
+    {
+    "titulo": "Agente 86",
+    "ano": 2008,
+    "classificacao": "12",
+    "nota": 6.5
+    },
+    {
+    "titulo": "Todo mundo em panico 3",
+    "ano": 2003,
+    "classificacao": "14",
+    "nota": 5.5
+    },
+    {
+    "titulo": "Monty Python em busca do calice sagrado",
+    "ano": 1975,
+    "classificacao": "Livre",
+    "nota": 8.2
+    }
+    ]
