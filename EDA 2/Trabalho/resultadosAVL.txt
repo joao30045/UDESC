@@ -1,0 +1,28 @@
+Tamanho: 1
+Operações médias de adição: 1.000000
+Operações médias de remoção: 1.000000
+
+Tamanho: 50
+Operações médias de adição: 543.600000
+Operações médias de remoção: 235.900000
+
+Tamanho: 100
+Operações médias de adição: 1279.300000
+Operações médias de remoção: 564.500000
+
+Tamanho: 500
+Operações médias de adição: 8806.900000
+Operações médias de remoção: 3980.300000
+
+Tamanho: 1000
+Operações médias de adição: 19661.700000
+Operações médias de remoção: 8973.900000
+
+Tamanho: 5000
+Operações médias de adição: 121637.100000
+Operações médias de remoção: 56509.400000
+
+Tamanho: 10000
+Operações médias de adição: 264139.000000
+Operações médias de remoção: 123356.300000
+
