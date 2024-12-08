@@ -1,0 +1,32 @@
+1) O protocolo Two Phase Lock possui 2 fases. Descreva a principal função de cada uma.
+
+    a) Growing phase (Crescimento): Tx pode obter bloqueios, mas não pode liberar nenhum bloqueio.
+
+    b) Shrinking phase (Encolhimento): Tx pode liberar bloqueios, mas não pode obter nenhum bloqueio. 
+
+ 
+2) O que é um deadlock em transações de banco de dados?
+Quando duas ou mais transações ficam bloqueadas, esperando por recursos que outras transações estão usando. 
+Por exemplo, Ty está na Fila-WAIT(D1) de um dado D1 bloqueado por Tx e Tx está na Fila-WAIT(D2) de um dado D2 
+bloqueado por Ty.
+
+3) Existem 2 protocolos clássicos de timestamp para controle de transação: wait-die e wound-wait.
+
+Wait-die
+
+a)      Transações velhas esperam as transações mais novas.
+
+b)      Quanto mais nova for a transação, mais ela vai esperar.
+
+Wound-wait
+
+a)      Transações velhas abortam as transações novas.
+
+b)      Quanto mais velha ficar a transação, menor a chance de espera.
+
+
+4) Existe deadlock no grafo de espera abaixo? Explique.
+T2 -> T3 -> T4 -> T1
+T2 -> T1
+T2 -> T5
+Grafo livre de deadlock, pois não há um ciclo fechado.
