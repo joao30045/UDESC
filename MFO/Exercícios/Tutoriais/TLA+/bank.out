@@ -1,0 +1,52 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.20 of Day Month 20?? (rev: 0613f42)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 48 and seed 6165721562259344403 with 1 worker on 8 cores with 1820MB heap and 64MB offheap memory [pid: 2673] (Mac OS X 15.3.2 aarch64, Oracle Corporation 21.0.7 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/macjp/UDESC/MFO/Tutoriais/TLA+/bank.tla
+Parsing file /private/var/folders/kj/96q5x78n67d5x2w3_8_5zt9r0000gn/T/tlc-7967976534942162470/Integers.tla (jar:file:/Users/macjp/.vscode/extensions/tlaplus.vscode-ide-2025.4.260038/tools/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /private/var/folders/kj/96q5x78n67d5x2w3_8_5zt9r0000gn/T/tlc-7967976534942162470/Naturals.tla (jar:file:/Users/macjp/.vscode/extensions/tlaplus.vscode-ide-2025.4.260038/tools/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module bank
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2025-04-28 09:31:51)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2025-04-28 09:31:51.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(5) at 2025-04-28 09:31:54: 4.368.930 states generated (4.368.930 s/min), 552.366 distinct states found (552.366 ds/min), 515.561 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.4E-6
+  based on the actual fingerprints:  val = 4.8E-12
+@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(5) at 2025-04-28 09:32:20: 49.744.126 states generated (101.339.384 s/min), 912.951 distinct states found (1.859.875 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+49744126 states generated, 912951 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 5.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 31 and the 95th percentile is 3).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 29454ms at (2025-04-28 09:32:20)
+@!@!@ENDMSG 2186 @!@!@

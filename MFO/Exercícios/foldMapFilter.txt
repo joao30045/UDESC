@@ -1,0 +1,13 @@
+Exercício: map e filter com fold
+Exercício: Re-escreva nossos exemplos anteriores usando fold ao invés
+de map e filter:
+1 Dado um conjunto de números, retorne um conjunto do quadrado
+desses números.
+2 Dado um conjunto de números, retorne um conjunto apenas com os
+números pares.
+Você vai precisar usar:
+1 União de conjuntos s1 e s2: s1.union(s2)
+2 Condicional: if (cond) bloco1 else bloco2
+
+1 - Set(1,2,3).fold(Set(), (acc, i) => acc.union(Set(i * i)))
+2 - Set(1,2,3,4).fold(Set(), (acc, i) => if (i % 2 == 0) acc.union(Set(i * i) else acc))
