@@ -1,0 +1,7 @@
+>q0 a q0 e X
+q0 e q1 e e
+q1 b q1 e X
+q1 e q2 e e
+q2 a q2 X e
+q2 ? qf ? e
+*qf

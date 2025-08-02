@@ -1,0 +1,44 @@
+#Renegade
+renegade_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+renegade_sport soldar pintar chassi rodas vidros cambio 
+renegade_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+renegade_longitude soldar 
+renegade_trailhawk soldar pintar chassi rodas vidros cambio multimidia sensor adesivo teste sucesso
+renegade_trailhawk soldar pintar chassi rodas 
+
+#Compass
+compass_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+compass_sport soldar pintar chassi rodas 
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+compass_longitude soldar pintar chassi rodas vidros cambio 
+compass_4XE soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+compass_4XE soldar pintar chassi_solar 
+
+#COMMANDER
+commander_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+commander_longitude soldar pintar chassi rodas 
+commander_overland soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+commander_overland soldar 
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio multimidia sensor som teste sucesso
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio multimidia sensor som 
+
+#Wrangler
+wrangler_sahara soldar pintar chassi rodas vidros cambio multimidia sensor camera teste sucesso
+wrangler_sahara soldar pintar chassi rodas vidros cambio 
+wrangler_rubicon soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor camera teste sucesso
+wrangler_rubicon soldar pintar chassi_solar 
+
+
+#22 carros por dia
+#1 renegade_sport incompleto
+#1 renegade_longitude incompleto
+#1 renegade_trailhawk incompleto
+#1 compass_sport incompleto
+#1 compass_longitude incompleto
+#1 compass_4XE incompleto
+#1 commander_longitude incompleto
+#1 commander_overland incompleto
+#1 commander_overland4x4 incompleto
+#1 wrangler_sahara incompleto
+#1 wrangler_rubicon incompleto
+#11 prontos

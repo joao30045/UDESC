@@ -1,0 +1,33 @@
+#Renegade
+renegade_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+renegade_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+renegade_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+renegade_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+renegade_trailhawk sem_pecas 
+renegade_trailhawk sem_pecas 
+
+#Compass
+compass_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+compass_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+compass_4XE soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+compass_4XE soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+
+#COMMANDER
+commander_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+commander_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+commander_overland sem_pecas 
+commander_overland sem_pecas 
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio multimidia sensor som teste sucesso
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio multimidia sensor som teste sucesso
+
+#Wrangler
+wrangler_sahara soldar pintar chassi rodas vidros cambio multimidia sensor camera teste sucesso
+wrangler_rubicon soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor camera teste sucesso
+wrangler_rubicon soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor camera teste sucesso
+
+#21 carros por dia
+#2 renegade_trailhawk sem_pecas
+#2 commander_overland sem_pecas
+#17 prontos

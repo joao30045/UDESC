@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<b>
+GIANLUCA RIGHETTO
+<br/>
+JOÃO PEDRO GARCIA GUEDES
+</b>
+<div id="graph" style="text-align: center;"></div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+<script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+<script>
+var dotIndex = 0;
+var graphviz = d3.select("#graph").graphviz()
+    .tweenShapes(false)
+    .tweenPaths(false)
+    .attributer(attributer)
+    .on("initEnd", render);
+
+function render() {
+    var dot = dots[dotIndex];
+    graphviz.renderDot(dot)
+}
+
+function attributer(datum, index, nodes) {
+    margin = 20; // to avoid scrollbars
+    var selection = d3.select(this);
+    if (datum.tag == "svg") {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        datum.attributes.width = width - margin;
+        datum.attributes.height = height - margin;
+    }
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        // left arrow
+        if (dotIndex == 0)
+            return;
+       dotIndex = dotIndex - 1;
+    }
+    else if (e.keyCode == '39') {
+        // right arrow
+        if (dotIndex == dots.length - 1)
+            return;
+        dotIndex = dotIndex + 1;
+    }
+
+    render();
+}
+
+var dots = [
+    //PLACEHOLDER
+];
+
+</script>

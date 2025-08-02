@@ -1,0 +1,43 @@
+#Renegade
+renegade_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+renegade_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+renegade_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+renegade_longitude soldar pintar chassi rodas vidros falha
+renegade_longitude soldar pintar chassi rodas vidros falha
+renegade_trailhawk soldar pintar chassi rodas vidros cambio multimidia sensor adesivo teste sucesso
+
+#Compass
+compass_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+compass_sport soldar pintar chassi rodas vidros cambio multimidia teste sucesso
+compass_longitude sem_pecas soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste falha sucesso
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste falha
+compass_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste falha
+compass_4XE soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+compass_4XE soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+
+#COMMANDER
+commander_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+commander_longitude soldar pintar chassi rodas vidros cambio multimidia sensor teste sucesso
+commander_overland soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+commander_overland soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor teste sucesso
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio multimidia sensor som teste sucesso
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+commander_overland4x4 soldar pintar chassi_solar rodas_19 vidros teto cambio falha
+
+#Wrangler 
+wrangler_sahara soldar pintar chassi rodas vidros cambio multimidia sensor camera falha 
+wrangler_sahara soldar pintar chassi rodas vidros cambio multimidia sensor camera teste sucesso
+wrangler_rubicon soldar pintar chassi_solar rodas vidros teto cambio multimidia sensor camera teste sucesso
+
+
+#28 carros no dia
+#2 falhas renegade_longitude
+#2 falhas compass_longitude
+#6 falhas commander_overland4x4
+#1 falha wrangler_sahara
+#17 prontos

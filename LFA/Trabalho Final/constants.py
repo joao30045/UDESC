@@ -1,0 +1,11 @@
+PROPS = "properties"
+SYMBOLS = "symbols"
+INITIAL = "initial"
+FINAL = "final"
+EPSILON = "e"
+QUESTION_MARK = "?"
+VALID = True
+INVALID = False
+
+APPLIED_TRANSITION = 1
+CANNOT_APPLY_TRANSITION = 0
