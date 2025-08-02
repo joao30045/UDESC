@@ -1,0 +1,9 @@
+Mensagens:
+Advertência : Coerção de int para double em:
+	Mul (IdVar "x") (Const (CInt 2))
+
+Advertência : Coerção de double para int em:
+	Atrib "a" (Mul (IdVar "x") (Const (CInt 2)))
+
+
+AST: Prog [] [] ["a" :#: (TInt,0),"x" :#: (TDouble,0)] [Atrib "x" (Const (CDouble 10.5)),Atrib "a" (DoubleInt (Mul (IdVar "x") (Const (CInt 2))))]

@@ -1,0 +1,42 @@
+{
+	int a;
+	double x;
+
+	x = 10.5;
+	a = x * 2;
+}
+
+Prog [] [] ["a":#:(Tint, 0), "x":#:(Tdouble, 0)] [Atrib "x" (const (tcons cdouble 10.5)), Atrib "a" Doubleint ( (Mul (idvar "x") (Intdouble (const(tcons cint 2) ))]
+
+
+Monad para propagar string de erro:
+
+data M a = MS (string, a) deriving show
+	
+instance Functor M where 
+       fmap f (MS (s, a)) = (MS (s, fa))  			    
+
+instance Aplicative M where
+       pure a = MS("", a)
+       MS (s1, f) <*> MS (s2, x) = MS (s1++s2, fx)
+
+instance Monad M where
+       MS m >>= f = let (s, a) = m in let MS (s', b) = f a in MS (s++s', b)
+
+erro s = MS ("Erro: "++s, ())
+adv s = MS ("Advertencia: "++s, ())
+
+verExpr lab/tab (Add e1 e2) = do (t1, e1') <- verExpr lab/tab e1
+                                 (t2, e2') <- verExpr lab/tab e2
+                                 if t1 == t2
+                                 then return (t1, Add e1' e2')
+				 else if t1 == Tint 
+                                         t2 == Tdouble 
+ 				      then do {adv "conversao int para double" return (t2, Add (Intdouble e1') e2')
+
+
+
+
+
+
+
