@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FADA7A;
+  font-family: "Courier", monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px solid #B1C29E;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  font-family: "Courier", monospace;
+}
+
+.search-box input:focus {
+  border-color: #F0A04B;
+  outline: none;
+}
+
+.description {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.description strong {
+  color: #000;
+}
+.ultimos-lancamentos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ultimos-lancamentos h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.jogos-capas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.jogos-capas img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.jogos-capas img:hover {
+  transform: scale(1.1);
+}
+.sobre-site {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Courier", monospace;
+}
+
+.sobre-site h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.sobre-site p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.funcionalidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.funcionalidade {
+  flex: 1 1 300px;
+  background-color: #F0A04B;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.funcionalidade img {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.funcionalidade h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.funcionalidade p {
+  font-size: 16px;
+  line-height: 1.4;
+}

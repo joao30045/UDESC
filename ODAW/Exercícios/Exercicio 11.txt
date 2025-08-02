@@ -1,0 +1,24 @@
+-- Comandos Windows:
+-- Entrar no xampp;
+-- Start Apache e MySQL; 
+-- Shell; 
+-- >mysql -u root -p
+
+create database odaw;
+
+create table usuario (codigo int auto_increment primary key, nome char(50), 
+dataNascimento char(10), email char(50), nomeUsuario char(50), senha char(50));
+
+insert into usuario values (NULL, 'Joao', '11/04/2000', 'joao@udesc.br', 'joaoudesc', 'senha');
+insert into usuario values (NULL, 'Pedro', '12/04/2000', 'pedro@udesc.br', 'pedroudesc', 'senha');
+insert into usuario values (NULL, 'Joao Pedro', '13/04/2000', 'jp@udesc.br', 'jpudesc', 'senha');
+
+update usuario set senha = 'novasenha' where nome = 'Joao Pedro';
+
+select * from usuario;
+
+delete from usuario where nome = 'Pedro';
+
+drop table usuario;
+
+drop database odaw;

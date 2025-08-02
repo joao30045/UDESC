@@ -1,0 +1,29 @@
+.ranking-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.jogo {
+    display: flex;
+    align-items: center;
+    background-color: #B1C29E;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.jogo img {
+    margin-right: 20px;
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+}
+.jogo-info {
+    display: flex;
+    flex-direction: column;
+}
+.titulo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.nota {
+    font-size: 1em;
+    color: black;
+}

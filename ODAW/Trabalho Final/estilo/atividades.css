@@ -1,0 +1,46 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.atividade {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+}
+
+.atividade img.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.info {
+    flex: 1;
+}
+
+.usuario {
+    font-weight: bold;
+}
+
+.nota {
+    font-weight: bold;
+}
+
+.data {
+    font-size: 0.9em;
+    color: black;
+}
+
+.titulo-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.titulo-link:hover {
+    text-decoration: underline;
+    color: #F0A04B;
+}
